@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container {
+				width: 1200px;
+				height: 210px;
+				position: absolute;
+				left:50%;
+				top:50%;
+				margin:-65px -600px;
+				-webkit-transform:scale(.9);
+				-ms-transform:scale(.9);
+				transform:scale(0.9);
+				background: -webkit-linear-gradient(left, #00BBFF, #00BBFF 14.3%, #2EB5E5 14.3%, #2EB5E5 28.6%, #E6E6E6 28.6%, #E6E6E6 42.9%, #F3D166 42.9%, #F3D166 57.2%, #222233 57.2%, #222233 71.5%, #444444 71.5%, #444444 85.8%, #85DB8C 85.8%);
+                background: linear-gradient(left, #00BBFF, #00BBFF 14.3%, #2EB5E5 14.3%, #2EB5E5 28.6%, #E6E6E6 28.6%, #E6E6E6 42.9%, #F3D166 42.9%, #F3D166 57.2%, #222233 57.2%, #222233 71.5%, #444444 71.5%, #444444 85.8%, #85DB8C 85.8%);
+            }
+			
+			
+			.sunny { 
+				-webkit-animation:sunny 15s linear infinite;
+				animation:sunny 15s linear infinite;
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+				width: 20px;
+		        height: 140px;
+		        margin-left: -15px;
+		        position: absolute;
+		        left: 90px;  
+		        top: 20px;
+    		}
+    		
+    		.sunny:before {
+    			background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+				content:'';
+				width: 20px;
+				height: 140px;
+				opacity: 1;
+				position: absolute;
+				bottom:0px;
+				left:0px;
+				-webkit-transform:rotate(90deg);
+				-ms-transform:rotate(90deg);
+				transform:rotate(90deg);
+    		}
+    		.sunny:after {
+    			background-color: #ffee44;
+    			border-radius:50%;
+    			box-shadow:rgba(255,255,0,0.2) 0 0 0 15px;
+    			content:'';
+    			width: 80px;
+    			height: 80px;
+    			position: absolute;
+    			left:-30px;
+    			top:30px;
+    		}
+    		@-webkit-keyframes sunny {
+    			0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    			100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+    		}
+    		@keyframes sunny {
+    			0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    			100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+    		}
+    		
+    		.cloudy {
+    			-webkit-animation:cloudy 5s ease-in-out infinite;
+    			animation:cloudy 5s ease-in-out infinite;
+		        background: #FFFFFF;
+		        border-radius: 50%;
+		        box-shadow: 
+		            #FFFFFF 65px -15px 0 -5px, 
+		            #FFFFFF 25px -25px, 
+		            #FFFFFF 30px 10px, 
+		            #FFFFFF 60px 15px 0 -10px, 
+		            #FFFFFF 85px 5px 0 -5px;
+		        height: 50px;
+		        width: 50px; 
+		        margin-left: -60px;
+		        position: absolute;
+		        left: 255px;
+		        top: 70px; 
+		    }
+		    .cloudy:after {
+		    	-webkit-animation:cloudy_shadow 5s ease-in-out infinite;
+		    	animation:cloudy_shadow 5s ease-in-out infinite;
+		    	background:#000000;
+		    	border-radius:50%;
+		    	content:'';
+		    	width: 120px;
+		    	height: 15px;
+		    	opacity: 0.2;
+		    	position: absolute;
+		    	left:5px;
+		    	bottom:-60px;
+		    	-webkit-transform:scale(.7);
+		    	-ms-transform:scale(.7);
+		    	transform:scale(.7);
+		    }
+		    @-webkit-keyframes cloudy {
+		    	50% {-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+		    }
+		    @keyframes cloudy {
+		    	50% {-webkit-transform:translateY(-20px);transform:translateY(-20px);}
+		    }
+		    @-webkit-keyframes cloudy_shadow {
+		    	50% {-webkit-transform:translateY(20px) scale(1);transform:translateY(20px) scale(1);opacity:0.5;}
+		    }
+    		@keyframes cloudy_shadow {
+    			50%{-webkit-transform:translateY(20px) scale(1);transform:translateY(20px) scale(1);opacity:0.5;}
+    		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+	        <div class="sunny"></div> 
+	        <div class="cloudy"></div>
+	        <div class="rainy"></div>
+	        <div class="snowy"></div>
+	        <div class="rainbow"></div>
+	        <div class="starry"></div>
+	        <div class="stormy"></div>
+    	</div>
+	</body>
+</html>
